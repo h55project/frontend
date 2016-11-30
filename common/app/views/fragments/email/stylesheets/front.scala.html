@@ -97,6 +97,12 @@ table.container {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
+
+    /* This may have some whacky effects on whether columns stack correctly in mobile! */
+    table[class="body"] .columns,
+    table[class="body"] .column {
+        display: table !important;
+    }
 }
 
 </style>
