@@ -27,6 +27,16 @@ trait ABTestSwitches {
 
   Switch(
     ABTests,
+    "ab-editorial-email-opinion-variants",
+    "Assign users to variants of our Opinion UK email",
+    owners = Seq(Owner.withGithub("katebee")),
+    safeState = Off,
+    sellByDate = new LocalDate(2017, 1, 21),
+    exposeClientSide = true
+  )
+
+  Switch(
+    ABTests,
     "ab-membership-engagement-international-experiment",
     "Test varying the number of visits before showing the membership engagement banner",
     owners = Seq(Owner.withGithub("rupert.bates")),
