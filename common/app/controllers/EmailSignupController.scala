@@ -38,6 +38,8 @@ object ListIds {
   val guardianTodayAu = 1506
 
   val theBestOfOpinion = 2313
+  val theBestOfOpinionVariant = 9999 // part of an AB test in Habit Forming expires Feb 2017
+  val theBestOfOpinionControl = 8888 // part of an AB test in Habit Forming expires Feb 2017
   val theFiver = 218
   val mediaBriefing = 217
   val greenLight = 28
@@ -59,8 +61,8 @@ object ListIds {
 
   val zipFile = 1902
   val theFlyer = 2211
-  val theFlyerCards = 3806
-  val theFlyerConnected = 3807
+  val theFlyerCards = 3806 // part of an AB test in Habit Forming: expires Feb 2017
+  val theFlyerConnected = 3807 // part of an AB test in Habit Forming: expires Feb 2017
   val moneyTalks = 1079
   val fashionStatement = 105
   val crosswordEditorUpdate = 101
