@@ -13,7 +13,7 @@
 
 
 @headline(pressedContent: PressedContent) = {
-    <h3 class="headline">
+    @fullRow(Seq("headline")) {
         @defining(FaciaCardHeader.fromTrail(pressedContent, None)) { header =>
             @header.kicker.map { kicker =>
                 <span class="fc-item__kicker">@Html(kicker.kickerHtml)</span>
@@ -34,30 +34,22 @@
             }
         }
         @pressedContent.header.headline
-    </h3>
+    }
 }
 
 @faciaCardLarge(pressedContent: PressedContent) = {
-    @paddedRow {
-        @defining(EditionalisedLink.fromFaciaContent(pressedContent).hrefWithRel) { href =>
-            <a @Html(href) class="facia-card facia-card--large @toneClass(pressedContent)">
-                @imgFromPressedContent(pressedContent)
-                @headline(pressedContent)
-                @pressedContent.card.trailText.map { trailText =>
-                    <h4 class="trail-text">@trailText</h4>
-                }
-            </a>
+    @paddedRow(Seq("facia-card", "facia-card--large", toneClass(pressedContent))) {
+        @imgFromPressedContent(pressedContent)
+        @headline(pressedContent)
+        @pressedContent.card.trailText.map { trailText =>
+            @fullRow(Seq("trail-text")){ @trailText }
         }
     }
 }
 
 @faciaCardSmall(pressedContent: PressedContent) = {
-    @paddedRow {
-        @defining(EditionalisedLink.fromFaciaContent(pressedContent).hrefWithRel) { href =>
-            <a @Html(href) class="facia-card @toneClass(pressedContent)">
-                @headline(pressedContent)
-            </a>
-        }
+    @paddedRow(Seq("facia-card", toneClass(pressedContent))) {
+        @headline(pressedContent)
     }
 }
 
