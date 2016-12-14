@@ -13,7 +13,7 @@
 
 
 @headline(pressedContent: PressedContent) = {
-    @fullRow(Seq("headline")) {
+    <h4 class="headline">
         @defining(FaciaCardHeader.fromTrail(pressedContent, None)) { header =>
             @header.kicker.map { kicker =>
                 <span class="fc-item__kicker">@Html(kicker.kickerHtml)</span>
@@ -34,22 +34,28 @@
             }
         }
         @pressedContent.header.headline
-    }
+    </h4>
 }
 
 @faciaCardLarge(pressedContent: PressedContent) = {
-    @paddedRow(Seq("facia-card", "facia-card--large", toneClass(pressedContent))) {
+    @paddedRow {
+        @*
         @imgFromPressedContent(pressedContent)
-        @headline(pressedContent)
-        @pressedContent.card.trailText.map { trailText =>
-            @fullRow(Seq("trail-text")){ @trailText }
+        *@
+        @fullRow(Seq("facia-card", "facia-card--large", toneClass(pressedContent))) {
+            @headline(pressedContent)
+            @pressedContent.card.trailText.map { trailText =>
+                <h3 class="trail-text">@trailText</h3>
+            }
         }
     }
 }
 
 @faciaCardSmall(pressedContent: PressedContent) = {
-    @paddedRow(Seq("facia-card", toneClass(pressedContent))) {
-        @headline(pressedContent)
+    @paddedRow {
+        @fullRow(Seq("facia-card", toneClass(pressedContent))) {
+            @headline(pressedContent)
+        }
     }
 }
 
