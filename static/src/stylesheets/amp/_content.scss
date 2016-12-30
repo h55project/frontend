@@ -22,6 +22,10 @@
     overflow: hidden;
 }
 
+.content__labels--not-immersive {
+    border-bottom: 1px dotted $neutral-5;
+}
+
 .content__section-label {
     float: left;
     padding-right: $gs-gutter/3;
@@ -184,7 +188,7 @@
 }
 
 .byline {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
     font-weight: 600;
     margin-bottom: 0;
@@ -325,6 +329,8 @@
 }
 
 .old-article-message {
+    font-size: 12px;
+    line-height: 1;
     display: inline-block;
     color: $neutral-2;
     margin-bottom: $gs-baseline;
@@ -390,6 +396,7 @@
     .inline-quote__svg {
         width: 19px;
         height: 12px;
+        fill: $neutral-2;
     }
 
     .inline-video__svg,
