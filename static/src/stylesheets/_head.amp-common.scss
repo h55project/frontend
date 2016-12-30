@@ -10,6 +10,7 @@
 @import 'base/_lists';
 @import 'base/_inline-svgs';
 @import 'amp/_type';
+@import 'amp/_fonts';
 
 @include grid-system;
 @import 'amp/_header';
@@ -18,6 +19,9 @@
 @import 'amp/_rich-link';
 @import 'amp/_content';
 @import 'amp/_social';
+@import 'amp/_tables';
+@import 'amp/_tones';
+@import 'amp/_player-card';
 
 @import 'module/external/_from-content-api';
 @import 'module/_icons.head';

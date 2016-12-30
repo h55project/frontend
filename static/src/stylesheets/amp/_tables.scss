@@ -1,0 +1,118 @@
+.score-container {
+    margin-bottom: 12px;
+}
+
+figure.element-table {
+    margin: 0 .1rem 0 1.25rem;
+    float: right;
+    width: 18.75rem;
+}
+
+@media (max-width: 500px) {
+    figure.element-table {
+        width: 100%;
+        margin: 0 .125rem;
+    }
+}
+
+.match-summary {
+    position: relative;
+    display: block;
+    border-bottom: 1px dotted $neutral-2;
+
+    .match-info {
+        padding: 10px 0;
+    }
+
+    .match-summary__status {
+        display: none;
+    }
+}
+
+.match-summary__team--away {
+    text-align: right;
+}
+
+.match-info {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.match-info__competition {
+    font-weight: bold;
+}
+
+.match-summary__teams {
+    display: flex;
+    border-top: 1px dotted $neutral-2;
+    padding-top: $gs-baseline;
+}
+
+.match-summary__team {
+    min-height: 44px;
+    flex: 1;
+    vertical-align: top;
+}
+
+.team__score {
+    font-weight: 400;
+    min-width: 1.2em;
+    position: absolute;
+    top: 0;
+}
+
+.match-summary__team--home .team__score {
+    right: 0;
+}
+
+.match-summary__team--away .team__score {
+    left: 0;
+}
+
+.team__scorers {
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    color: #767676;
+}
+
+.team__scorers dd {
+    padding: 0;
+    margin: 0;
+}
+
+.match-summary .team__info {
+    line-height: 1.75rem;
+    position: relative;
+}
+
+.match-summary .team__heading {
+    margin-top: 0;
+}
+
+.team__name {
+    margin: 0;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 500px) {
+    .team__name {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+.match-summary__team--home .team__score::after {
+    content: '\2013';
+    position: absolute;
+    text-align: center;
+    right: -15px;
+    width: 30px;
+}
